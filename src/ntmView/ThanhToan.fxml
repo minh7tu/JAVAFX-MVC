@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntmController.ThanhToanController">
+   <children>
+      <GridPane layoutX="2.0" layoutY="404.0" prefHeight="47.0" prefWidth="350.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="274.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="76.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button  mnemonicParsing="false" onAction="#onClickOrder" prefHeight="54.0" prefWidth="76.0" styleClass="button1" text="Đặt hàng" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" contentDisplay="BOTTOM" nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="274.0" text="                                                      Tổng thanh toán">
+               <graphic>
+                  <TextField fx:id="textTotalCost" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="274.0" styleClass="textfield1" text="₫15.299" />
+               </graphic>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="2.0" layoutY="-3.0" prefHeight="36.0" prefWidth="350.0" text="Thanh toán" />
+      <AnchorPane layoutX="2.0" layoutY="33.0" prefHeight="331.0" prefWidth="350.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="366.0" prefWidth="350.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="758.0" prefWidth="348.0">
+                     <children>
+                        <Button layoutX="-5.0" mnemonicParsing="false" onAction="#onClickDeliveryAddress" prefHeight="94.0" prefWidth="341.0" styleClass="button2">
+                           <graphic>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchorPane">
+                                 <children>
+                                    <Label layoutX="-1.0" prefHeight="23.0" prefWidth="329.0" text="Địa chỉ nhận hàng">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/vitri.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Label>
+                                    <GridPane layoutY="24.0" prefHeight="64.0" prefWidth="330.0" styleClass="gridPane">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="224.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="82.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="26.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TextField fx:id="textFullname" editable="false" styleClass="textfield" text="Minh Tử" />
+                                          <TextField fx:id="textNumberPhone" editable="false" styleClass="textfield" text="0372392001" GridPane.columnIndex="1" />
+                                          <TextField fx:id="textOwnAddress" editable="false" styleClass="textfield" text="Cổng chợ" GridPane.rowIndex="1" />
+                                          <TextField fx:id="textAddress" editable="false" styleClass="textfield" text="Chúc Sơn , Chương Mỹ , Hà Nội" GridPane.rowIndex="2" />
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="22.0" styleClass="textfield" text="&gt;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="26.0" fitWidth="339.0" layoutX="-3.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/duong.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="3.0" layoutY="117.0" prefHeight="29.0" prefWidth="337.0" text="giaysneaker365">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/cuahang.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <SplitPane layoutY="155.0" orientation="VERTICAL" prefHeight="71.0" prefWidth="339.0">
+                           <items>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="56.0" fitWidth="68.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/sim.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="79.0" layoutY="2.0" prefHeight="25.0" prefWidth="258.0" text="Sim Vietnam tạo fb,shope,zalo,sen,lad,email,mmo........" />
+                                    <Label layoutX="79.0" layoutY="44.0" text="₫5.499" />
+                                    <Label layoutX="311.0" layoutY="44.0" text="x1" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <Button  layoutX="3.0" layoutY="226.0" mnemonicParsing="false" onAction="#onClickShip" prefHeight="99.0" prefWidth="345.0" styleClass="button2">
+                           <graphic>
+                              <AnchorPane prefHeight="64.0" prefWidth="354.0">
+                                 <children>
+                                    <Label layoutY="-1.0" prefHeight="24.0" prefWidth="325.0" text="Phương thức vận chuyển(Nhấn để chọn)" />
+                                    <GridPane layoutY="23.0" prefHeight="90.0" prefWidth="329.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="230.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="75.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="22.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TextField fx:id="textExpressShip" editable="false" prefHeight="26.0" prefWidth="165.0" styleClass="textfield" text="Vận Chuyển Hỏa Tốc" />
+                                          <TextField fx:id="textNowShip" editable="false" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="165.0" styleClass="textfield" text="NowShip" GridPane.rowIndex="1" />
+                                          <TextField fx:id="textDate" editable="false" layoutX="10.0" layoutY="39.0" prefHeight="30.0" prefWidth="165.0" styleClass="textfield" text="Nhận hàng vào ngày 25 Th07-27 Th07" GridPane.rowIndex="2" />
+                                          <TextField fx:id="textPrice" alignment="CENTER_RIGHT" editable="false" layoutX="10.0" layoutY="36.0" prefHeight="33.0" prefWidth="165.0" styleClass="textfield" text="₫10.000" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField alignment="CENTER" editable="false" layoutX="240.0" layoutY="36.0" prefHeight="33.0" prefWidth="165.0" styleClass="textfield" text="&gt;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                        </Button>
+                        <GridPane layoutX="2.0" layoutY="347.0" prefHeight="66.0" prefWidth="343.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextArea fx:id="textNode" nodeOrientation="RIGHT_TO_LEFT" prefHeight="49.0" prefWidth="171.0" promptText="Lưu ý cho người bán" styleClass="textArea" GridPane.columnIndex="1" />
+                              <Label contentDisplay="RIGHT" prefHeight="33.0" prefWidth="186.0" text="Tin nhắn:" />
+                              <TextField fx:id="textTotal" alignment="CENTER_RIGHT" editable="false" prefHeight="34.0" prefWidth="169.0" styleClass="textfield1" text="₫5.499" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label contentDisplay="RIGHT" prefHeight="33.0" prefWidth="187.0" text="Tổng số tiền(1 sản phẩm):" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button  layoutX="1.0" layoutY="425.0" mnemonicParsing="false" onAction="#onClickShopeeVourcher" prefHeight="33.0" prefWidth="337.0" styleClass="button2">
+                           <graphic>
+                              <Label prefHeight="25.0" prefWidth="325.0" text="&gt;">
+                                 <graphic>
+                                    <Label prefHeight="22.0" prefWidth="307.0" text="Chọn hoặc nhập mã">
+                                       <graphic>
+                                          <Label prefHeight="22.0" prefWidth="178.0" text="Shopee Voucher">
+                                             <graphic>
+                                                <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/keo.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                 </graphic>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <GridPane layoutX="4.0" layoutY="458.0" prefHeight="30.0" prefWidth="331.0" styleClass="gridPane">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="29.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="202.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="4.0" layoutY="2.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/tien.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label prefHeight="30.0" prefWidth="198.0" text="Dùng 200 Shopee Xu" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button  layoutX="1.0" layoutY="495.0" mnemonicParsing="false" onAction="#onClickPay" prefHeight="36.0" prefWidth="337.0" styleClass="button2">
+                           <graphic>
+                              <Label prefHeight="30.0" prefWidth="338.0">
+                                 <graphic>
+                                    <Label prefHeight="30.0" prefWidth="321.0" text="Thanh toán khi nhận hàng &gt;">
+                                       <graphic>
+                                          <Label prefHeight="30.0" prefWidth="166.0" text="Phương thức Thanh Toán">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/tien1.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                 </graphic>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="5.0" layoutY="533.0" prefHeight="26.0" prefWidth="334.0" styleClass="label2" text="Thanh toán dễ dàng hơn với Ví ShopeePay !" />
+                        <GridPane layoutX="1.0" layoutY="566.0" prefHeight="90.0" prefWidth="339.0" styleClass="gridPane">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="256.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="76.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="textTotal" alignment="CENTER" editable="false" prefHeight="5.0" prefWidth="79.0" styleClass="label" text="₫5.499" GridPane.columnIndex="1" />
+                              <TextField fx:id="textPrice" alignment="CENTER" editable="false" layoutX="266.0" layoutY="7.0" styleClass="label" text="₫10.000" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField alignment="CENTER" editable="false" layoutX="266.0" layoutY="25.0" styleClass="label" text="-₫0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="textXu" alignment="CENTER" editable="false" layoutX="266.0" layoutY="43.0" styleClass="label" text="-₫200" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="textTotalCost" alignment="CENTER" editable="false" layoutX="266.0" layoutY="61.0" styleClass="label1" text="₫15,299" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label prefHeight="26.0" prefWidth="258.0" text="Tổng tiền hàng" />
+                              <Label layoutX="10.0" layoutY="11.0" prefHeight="27.0" prefWidth="258.0" text="Tổng tiền phí vận chuyện" GridPane.rowIndex="1" />
+                              <Label layoutX="10.0" layoutY="29.0" prefHeight="25.0" prefWidth="258.0" text="Giảm giá phí vận chuyển" GridPane.rowIndex="2" />
+                              <Label layoutX="10.0" layoutY="47.0" prefHeight="23.0" prefWidth="258.0" text="Đã dùng ShopeeXu" GridPane.rowIndex="3" />
+                              <Label layoutX="10.0" layoutY="65.0" prefHeight="36.0" prefWidth="258.0" text="Tổng thanh toán " GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="-2.0" layoutY="668.0" prefHeight="52.0" prefWidth="343.0" styleClass="gridPane">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="37.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="306.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextArea prefHeight="67.0" prefWidth="306.0" styleClass="textArea" text="Nhấn &quot; Đặt hàng &quot; đồng nghĩa với việc bạn đồng ý &#10;tuân theo Điều khoản Shopee" GridPane.columnIndex="1" />
+                              <ImageView fitHeight="47.0" fitWidth="30.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/bc.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

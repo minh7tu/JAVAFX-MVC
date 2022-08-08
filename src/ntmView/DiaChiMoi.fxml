@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntmController.DiaChiMoiController">
+   <children>
+      <Label layoutX="36.0" prefHeight="35.0" prefWidth="293.0" text="Địa chỉ mới">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font></Label>
+      <TextField disable="true" editable="false" layoutX="1.0" layoutY="33.0" prefHeight="8.0" prefWidth="329.0" text="Liên hệ" />
+      <TextField fx:id="textFullname" layoutX="1.0" layoutY="58.0" prefHeight="25.0" prefWidth="329.0" promptText="Họ và tên" />
+      <TextField fx:id="textNumberPhone" layoutX="-1.0" layoutY="83.0" prefHeight="25.0" prefWidth="329.0" promptText="Số điện thoại" />
+      <TextField disable="true" editable="false" layoutX="1.0" layoutY="108.0" prefHeight="25.0" prefWidth="329.0" text="Địa chỉ" />
+      <TextField fx:id="textAddress" layoutX="1.0" layoutY="133.0" prefHeight="25.0" prefWidth="329.0" promptText="Tỉnh/ Thành phố, Quận/Huyện, Phường/Xã" />
+      <TextField fx:id="textOwnAddress" layoutX="1.0" layoutY="158.0" prefHeight="25.0" prefWidth="329.0" promptText="Tên đường, Tòa nhà, Số nhà" />
+      <TextField disable="true" editable="false" layoutX="-1.0" layoutY="183.0" prefHeight="25.0" prefWidth="329.0" text="Cài đặt" />
+      <TextField editable="false" layoutY="241.0" prefHeight="25.0" prefWidth="329.0" text="Đặt địa chỉ mặc định" />
+      <Button fx:id="btnComplete" layoutX="8.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickComplete" prefHeight="25.0" prefWidth="315.0" styleClass="button1" text="HOÀN THÀNH" />
+      <Button fx:id="btnExit" layoutX="-1.0" mnemonicParsing="false" onAction="#onClickExit" prefHeight="20.0" prefWidth="30.0" styleClass="button2">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/back.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="mark" layoutX="245.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickMark" />
+      <TextField editable="false" layoutY="208.0" prefHeight="33.0" prefWidth="329.0" text="Loại địa chỉ :" />
+      <ToggleButton fx:id="btnOffice" layoutX="154.0" layoutY="208.0" mnemonicParsing="false" onAction="#onClickAddress" text="Văn phòng" toggleGroup="$group">
+         <graphic>
+            <ToggleButton fx:id="btnHome" mnemonicParsing="false" onAction="#onClickAddress" text="Nhà riêng">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </ToggleButton>
+         </graphic>
+      </ToggleButton>
+   </children>
+</AnchorPane>

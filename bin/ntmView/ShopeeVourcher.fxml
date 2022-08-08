@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntmController.ShopeeVourcherController">
+   <children>
+      <SplitPane orientation="VERTICAL" prefHeight="102.0" prefWidth="370.0">
+         <items>
+            <AnchorPane prefHeight="119.0" prefWidth="368.0" styleClass="anchorPane">
+               <children>
+                  <Button fx:id="btnExit" layoutY="1.0" mnemonicParsing="false" onAction="#onClickExit" prefHeight="25.0" prefWidth="48.0" styleClass="button2">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/back.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="49.0" layoutY="1.0" prefHeight="27.0" prefWidth="319.0" text="Chọn Shopee Voucher">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="textCodeVourcher" layoutX="14.0" layoutY="41.0" prefHeight="33.0" prefWidth="255.0" promptText="Nhập mã shopee voucher " />
+                  <Button fx:id="btnApply" layoutX="281.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickApply" prefHeight="33.0" prefWidth="62.0" text="Áp dụng" />
+                  <Label layoutX="14.0" layoutY="68.0" prefHeight="40.0" prefWidth="255.0" text="Rất tiếc! Không thể tìm thấy mã voucher này . " visible="false" />
+                  <Button fx:id="btnDelete" layoutX="230.0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="3.0" prefWidth="10.0" styleClass="button2">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/daux.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnQuestion" layoutX="323.0" layoutY="1.0" mnemonicParsing="false" onAction="#onClickQuestion" prefHeight="24.0" prefWidth="26.0" styleClass="button2">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/dau.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextArea fx:id="textMsg" disable="true" layoutX="14.0" layoutY="74.0" prefHeight="48.0" prefWidth="348.0" styleClass="textArea1" text="Rất tiếc ! Không thể tìm thấy mã vourcher này .Bạn vui&#10;lòng kiểm tra lại mã và hạn sử dụng nhé ." />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
